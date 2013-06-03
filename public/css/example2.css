@@ -1,0 +1,306 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+	margin:0;
+	padding:0
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+fieldset,img{
+	border:0
+}
+
+address,b,caption,cite,code,dfn,th,var{
+	font-style:normal;
+	font-weight:normal
+}
+
+ol,ul{
+	list-style:none
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+	font-weight:normal
+}
+
+a{
+	text-decoration:none
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+	display:block
+}
+
+@font-face{
+	font-family:'YanoneKaffeesatzBold';
+	src:url("fonts/YanoneKaffeesatz-Bold-webfont.eot");
+	src:url("fonts/YanoneKaffeesatz-Bold-webfont.eot?#iefix") format("embedded-opentype"),url("fonts/YanoneKaffeesatz-Bold-webfont.woff") format("woff"),url("fonts/YanoneKaffeesatz-Bold-webfont.ttf") format("truetype"),url("fonts/YanoneKaffeesatz-Bold-webfont.svg#YanoneKaffeesatzBold") format("svg");
+	font-weight:bold;
+	font-style:normal
+}
+
+.group,#seats,#seats ol ol{
+	zoom:1
+}
+
+.group:before,#seats:before,#seats ol ol:before,.group:after,#seats:after,#seats ol ol:after{
+	content:'';
+	display:table
+}
+
+.group:after,#seats:after,#seats ol ol:after{
+	clear:both
+}
+
+.texthide{
+	text-indent:-9999em;
+	text-transform:capitalize
+}
+
+html{
+	font-size:16px;
+	height:100%;
+	min-width:440px
+}
+
+body{
+	color:#4c3f31;
+	font:normal 62.5%/1.3em "Lucida Sans Unicode","Lucida Sans",Geneva,sans-serif
+}
+
+strong{
+	font-family:"Lucida Sans", Geneva, Arial, sans-serif
+}
+
+p{
+	font-size:1.3em;
+	line-height:1.3em
+}
+
+header{
+	-webkit-border-radius:10px 10px 0 0;
+	-moz-border-radius:10px 10px 0 0;
+	-o-border-radius:10px 10px 0 0;
+	border-radius:10px 10px 0 0;
+	margin:0 auto 20px;
+	padding:8px 0;
+	text-align:center
+}
+
+h1{
+	border-bottom:1px solid #ccc8c3;
+	color:#7d8385;
+	font:bold 3em/1em "YanoneKaffeesatzBold","Lucida Sans",Geneva,sans-serif;
+	padding-bottom:20px;
+	text-transform:uppercase}
+
+h2{
+	font:bold 2.2em/1em "YanoneKaffeesatzBold","Lucida Sans",Geneva,sans-serif;
+	margin:0 0 5px}
+
+h4{
+	color:#717b7c;
+	font:bold 1.8em/1em "YanoneKaffeesatzBold","Lucida Sans",Geneva,sans-serif;
+	letter-spacing:0.05em;
+	margin:0 0 8px}
+
+#seats{
+	margin:0 auto 20px;
+	width:440px
+}
+
+#seats p{
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+	padding-bottom:10px
+}
+
+#seats .seating-chart{
+	float:left;
+	margin-right:20px;
+	overflow:visible
+}
+
+#seats .seating-chart h3{
+	color:#cc3e2e;
+	font:bold 1.6em "YanoneKaffeesatzBold", "Lucida Sans", Geneva, sans-serif;
+	margin-bottom:10px;
+	text-align:center;
+	text-transform:uppercase
+}
+
+#seats ol .row{
+	margin:0 0 4px
+}
+
+#seats ol ol li{
+	float:left;
+	margin-right:6px
+}
+
+#seats ol ol li:nth-child(3){
+	margin-right:38px
+}
+
+#seats ol ol a{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	background:#dcd5c8;
+	border:2px solid #dcd5c8;
+	border-top:0;
+	color:#b0a288;
+	cursor:default;
+	display:block;
+	font:bold 1.4em/34px "Lucida Sans",Geneva,Arial,sans-serif;
+	height:32px;
+	position:relative;
+	text-align:center;
+	width:32px
+}
+
+#seats ol ol a.available{
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.3);
+	-o-box-shadow:0 1px 3px rgba(0,0,0,0.3);
+	box-shadow:0 1px 3px rgba(0,0,0,0.3);
+	background:#98a6a7;
+	border:2px solid #7d8385;
+	border-top:0;
+	color:#e0f1e6;
+	cursor:pointer;
+	text-shadow:0 1px 2px rgba(0,0,0,0.3)
+}
+
+#seats ol ol a.available:hover,#seats ol ol a.available:focus{
+	background:#656C6F;
+	border-color:#4d5254;
+	color:#fff
+}
+
+#seats ol ol a.selected{
+	-webkit-box-shadow:0 1px 3px #8cf5f5;
+	-moz-box-shadow:0 1px 3px #8cf5f5;
+	-o-box-shadow:0 1px 3px #8cf5f5;
+	box-shadow:0 1px 3px #8cf5f5;
+	background:#cc3e2e;
+	border:2px solid #b03628;
+	border-top:0;
+	color:#fff;
+	cursor:pointer;
+	text-shadow:0 1px 2px rgba(0,0,0,0.3)
+}
+
+#seats ol ol a .tooltip{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	-o-box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	box-shadow:0 1px 3px rgba(0,0,0,0.5);
+	background:#656C6F;
+	border:2px solid #4d5254;
+	border-top:0;
+	color:#fff;
+	left:20px;
+	min-width:100px;
+	padding:10px;
+	position:absolute;
+	text-align:center;
+	top:20px;
+	z-index:10
+}
+
+#seats ol.first-class{
+	margin-bottom:10px
+}
+
+#seats ol.first-class ol li:nth-child(2){
+	margin-right:35px
+}
+
+#seats ol.first-class ol li:nth-child(3){
+	margin-right:6px
+}
+
+#seats ol.first-class ol a{
+	height:54px;
+	line-height:54px;
+	width:54px
+}
+
+#seats #flight-navigation{
+	float:left;
+	width:120px
+}
+
+#seats #flight-navigation a{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	background:#98a6a7 url(//d2uh6sdzjue8na.cloudfront.net/assets/bg-btn-419e9015b95dca1625fe984c85d38aaa.png) repeat-x;
+	border:1px solid #272F30;
+	border:1px solid rgba(0,0,0,0.65);
+	-webkit-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3),inset 0 0 0 1px rgba(255,255,255,0.05),0 0 0 1px rgba(0,0,0,0.1);
+	-moz-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3),inset 0 0 0 1px rgba(255,255,255,0.05),0 0 0 1px rgba(0,0,0,0.1);
+	-o-box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3),inset 0 0 0 1px rgba(255,255,255,0.05),0 0 0 1px rgba(0,0,0,0.1);
+	box-shadow:inset 0 1px 0 0 rgba(255,255,255,0.3),inset 0 0 0 1px rgba(255,255,255,0.05),0 0 0 1px rgba(0,0,0,0.1);
+	color:white;
+	display:block;
+	padding:3px 10px;
+	text-align:center;
+	text-shadow:0 -1px rgba(0,0,0,0.4);
+	width:90px
+}
+
+#seats #flight-navigation a:hover{background:#7d8385
+}
+
+#seats #flight-navigation ul{margin-bottom:15px;
+	padding:0
+}
+
+#seats #flight-navigation ul li{margin-bottom:5px
+}
+
+#seats #highlights{margin:20px 0 10px
+}
+
+#seats #highlights h3{
+	font-size:1.2em;
+	padding-bottom:5px;
+	text-transform:uppercase
+}
+
+#seats #highlights ul li{
+	margin:5px 0
+}
+
+#seats #highlights ul li input{margin-right:5px
+}
+
+#seats #notify-me form label{
+	display:block;
+	margin-bottom:5px
+}
+
+#seats #notify-me form input{
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #aaa;
+	padding:5px;
+	width:129px
+}
+
+#seats aside{
+	float:left
+}

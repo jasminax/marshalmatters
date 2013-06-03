@@ -1,0 +1,27 @@
+body {
+	padding: 30px;
+}
+
+.inputs {
+
+}
+
+.graphic {
+
+}
+
+#boat li {
+	list-style-type: none;
+	display: block;
+}
+
+#boat ol > li {
+	margin: 5px;
+	border-radius: 10px;
+	background-color: #FFF;
+	border: 1px solid #ddd;
+	padding: 5px;
+	height: 250px;
+	width: 250px;
+	float: left;
+}
