@@ -15,8 +15,8 @@
 	</div>
 	<div class="row-fluid">
 
-	<div class="inputs well span5">
-		<form>
+		<div class="inputs well span5">
+			<form>
 			<fieldset>
 				<legend>Boat Properties</legend>
 				<label>Number of Rows</label>
@@ -25,17 +25,23 @@
 						<option>10</option>
 					</select>
 				
-				<label class="female-minimum">Minimum number of females</label>
-					<input type="number"/>
+				<label>Minimum number of females</label>
+					<input class="female-minimum" type="number"/>
 				</label>
 				<br/>
-				<button type ="submit" class="btn">Submit</button>
+				<button id = "submit" class="btn">Submit</button>
 
 			</fieldset>
-		</form>
-	</div>
+			</form>
+				<div class="row-fluid">
+					<div class="status well span12">
+			<h3>Status</h3>
+			<div>Gender: <span id="female-status"></span></div>
+		</div>
+				</div>
+		</div>
 
-	<div class="graphic well span7">
+		<div class="graphic well span7">
 		<ol id="boat">
 			<li class="row">
 				<ol>
@@ -51,8 +57,8 @@
 				</ol>
 			</li>
 		</ol>
+		</div>
 	</div>
-</div>
 </div>
 
 </body>
