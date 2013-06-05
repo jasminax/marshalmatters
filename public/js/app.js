@@ -22,10 +22,9 @@ $(document).ready(function(){
 
 	$('.row').find('li').append(form);
 
-	var minimumGirls = $('#female-minimum').val();
-
 	var checkMinimumGirls = function() {
 		var females = $('.femalepaddler:checked').length;
+		var minimumGirls = $('#female-minimum').val();
 		console.log(females);
 		console.log(minimumGirls);
 		if (females < minimumGirls) {
@@ -37,6 +36,15 @@ $(document).ready(function(){
 	}
 
 	$('input[type=radio]').on("click", checkMinimumGirls);
+	$('input[type=number]').on("click", checkMinimumGirls);
+
+	var checkSide = function() {
+		// check if the checked box input parent li is in the same class
+		var leftSide = $('');
+		console.log(leftSide);
+	}
 	
+	$('input[type=checkbox]').on("click",
+		checkSide);
 
 });
