@@ -10,10 +10,10 @@ $(document).ready(function(){
 		</label>\
 		<br/>\
 		<label class="paddler-side checkbox inline">\
-		<input type="checkbox" value="">Left\
+		<input type="checkbox" class="left" value="">Left\
 		</label>\
 		<label class="paddler-side checkbox inline">\
-		<input type="checkbox" value="">Right\
+		<input type="checkbox" class="right" value="">Right\
 		</label>\
 		</fieldset>\
 		</form>';
@@ -28,7 +28,7 @@ $(document).ready(function(){
 		console.log(females);
 		console.log(minimumGirls);
 		if (females < minimumGirls) {
-			$("#female-status").html("<span class='alert alert-error'>Too many dicks!</span>")
+			$("#female-status").html("<span class='alert alert-error'>Too many dudes!</span>")
 		}
 		else {
 			$("#female-status").html("<span class='alert alert-success'>Enough chicks.</span>")
@@ -39,12 +39,25 @@ $(document).ready(function(){
 	$('input[type=number]').on("click", checkMinimumGirls);
 
 	var checkSide = function() {
-		// check if the checked box input parent li is in the same class
-		var leftSide = $('');
-		console.log(leftSide);
+		var checkedSide = $('.row').find('input:checked').attr('class');
+		// Change this to the checked ones, not the one that was just checked - done! Now to change it to the checked on in the li
+
+		console.log(checkedSide);
+		console.log($(this));
+	
+		if (!$(this).closest('li').hasClass(checkedSide)) {
+			//turn red
+			console.log('No Match');
+			$(this).closest('li').animate({opacity: 0.4}, 800);
+		}
+		else{
+			//turn border greed
+			console.log('Match')
+			$(this).closest('li').animate({opacity: 1}, 800);
+		}
 	}
 	
-	$('input[type=checkbox]').on("click",
+	$('.row').find('input[type=checkbox]').on("click",
 		checkSide);
 
 });
