@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	var form = '<form><fieldset><input type="text" name="paddlername" placeholder="Name"/>\
-		<input type="text" name="paddlerweight" placeholder="Weight"/>\
+		<input type="text" class="weight" name="paddlerweight" placeholder="Weight"/>\
 		<label class="gender-selection radio inline">\
 		<input type="radio" name="genderselection" class="malepaddler" value="male">Male</input>\
 		</label>\
@@ -39,8 +39,12 @@ $(document).ready(function(){
 	$('input[type=number]').on("click", checkMinimumGirls);
 
 	var checkSide = function() {
+
+		// THIS FUNCTION IS BUGGY. I WILL COME BACK TO IT LATER.
+
 		var checkedSide = $('.row').find('input:checked').attr('class');
-		// Change this to the checked ones, not the one that was just checked - done! Now to change it to the checked on in the li
+		// var checkedSide = $(this).parent('li').find('input:checked').attr('class');
+		// Change this to the checked ones, not the one that was just checked - done! Now to change it to the checked one in the li
 
 		console.log(checkedSide);
 		console.log($(this));
@@ -59,5 +63,17 @@ $(document).ready(function(){
 	
 	$('.row').find('input[type=checkbox]').on("click",
 		checkSide);
+
+	var sumleft = 0;
+	var sumright = 0;
+
+	var sideWeight = function () {
+		// select each weight input for one side and add it
+	}
+
+	var checkWeights = function() {
+		
+
+	}
 
 });
