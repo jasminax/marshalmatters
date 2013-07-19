@@ -28,10 +28,10 @@ $(document).ready(function(){
 		console.log(females);
 		console.log(minimumGirls);
 		if (females < minimumGirls) {
-			$("#female-status").html("<span class='alert alert-error'>Too many dudes!</span>")
+			$("#female-status").html("<span class='alert alert-error'>Too many dudes!</span>");
 		}
 		else {
-			$("#female-status").html("<span class='alert alert-success'>Enough chicks.</span>")
+			$("#female-status").html("<span class='alert alert-success'>Enough chicks.</span>");
 		}
 	};
 
@@ -95,9 +95,11 @@ $(document).ready(function(){
 
 		if (sumRight === sumLeft) {
 			console.log("Equal Balance!");
+			$("#balance-status").html("<span class='alert alert-success'>Horray! It is!</span>");
 		}
 		else {
 			console.log('Unbalanced :(');
+			$("#balance-status").html("<span class='alert alert-error'>No, it's not. :(</span>");
 		}
 		sumLeft = 0;
 		sumRight = 0;
