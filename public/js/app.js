@@ -68,8 +68,8 @@ $(document).ready(function(){
 	var sumLeft = 0;
 	var sumRight = 0;
 
-	function calculateSumLeft() {
-		$(".left").find("#paddlerweight").each(function(){
+	function calculateSumLeft() {		
+		$(".left").find(".weight").each(function(){
 			if (!isNaN(this.value) && this.value.length!=0) {
 				sumLeft += parseFloat(this.value);
 			}
@@ -77,28 +77,30 @@ $(document).ready(function(){
 		return sumLeft;
 	}
 
-	function calculateSumRight() {
-	$(".right").find("#paddlerweight").each(function(){
-		if (!isNaN(this.value) && this.value.length!=0) {
-			sumRight += parseFloat(this.value);
-		}
-	});
-	return sumRight;
-}
+	function calculateSumRight() {		
+		$(".right").find(".weight").each(function(){
+			if (!isNaN(this.value) && this.value.length!=0) {
+				sumRight += parseFloat(this.value);
+			}
+		});
+		return sumRight;
+	}
 
 	var checkWeights = function() {
 		calculateSumLeft();
 		calculateSumRight();
 
-		console.log('Left Weight is: '+ sumLeft)
-		console.log('Right Weight is: '+ sumRight)		
+		console.log('Left Weight is: '+ sumLeft);
+		console.log('Right Weight is: '+ sumRight);		
 
 		if (sumRight === sumLeft) {
-			console.log("Equal Balance!")
+			console.log("Equal Balance!");
 		}
 		else {
-			console.log('Unbalanced :(')
+			console.log('Unbalanced :(');
 		}
+		sumLeft = 0;
+		sumRight = 0;
 	};
 
 	$('#weightbtn').on('click', checkWeights);
