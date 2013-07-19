@@ -33,7 +33,7 @@ $(document).ready(function(){
 		else {
 			$("#female-status").html("<span class='alert alert-success'>Enough chicks.</span>")
 		}
-	}
+	};
 
 	$('input[type=radio]').on("click", checkMinimumGirls);
 	$('input[type=number]').on("click", checkMinimumGirls);
@@ -59,21 +59,48 @@ $(document).ready(function(){
 			console.log('Match')
 			$(this).closest('li').animate({opacity: 1}, 800);
 		}
-	}
+	};
 	
 	$('.row').find('input[type=checkbox]').on("click",
 		checkSide);
 
-	var sumleft = 0;
-	var sumright = 0;
 
-	var sideWeight = function () {
-		// select each weight input for one side and add it
+	var sumLeft = 0;
+	var sumRight = 0;
+
+	function calculateSumLeft() {
+		$(".left").find("#paddlerweight").each(function(){
+			if (!isNaN(this.value) && this.value.length!=0) {
+				sumLeft += parseFloat(this.value);
+			}
+		});
+		return sumLeft;
 	}
+
+	function calculateSumRight() {
+	$(".right").find("#paddlerweight").each(function(){
+		if (!isNaN(this.value) && this.value.length!=0) {
+			sumRight += parseFloat(this.value);
+		}
+	});
+	return sumRight;
+}
 
 	var checkWeights = function() {
-		
+		calculateSumLeft();
+		calculateSumRight();
 
-	}
+		console.log('Left Weight is: '+ sumLeft)
+		console.log('Right Weight is: '+ sumRight)		
+
+		if (sumRight === sumLeft) {
+			console.log("Equal Balance!")
+		}
+		else {
+			console.log('Unbalanced :(')
+		}
+	};
+
+	$('#weightbtn').on('click', checkWeights);
 
 });
