@@ -20,16 +20,13 @@
 			<fieldset>
 				<legend>Boat Properties</legend>
 				<label>Number of Rows</label>
-					<select>
-						<option>5</option>
-						<option>10</option>
-					</select>
+					<input id="number-rows" type="number" value="1" min="1" max="10"></input>
 				
 				<label>Minimum number of females</label>
 					<input id="female-minimum" type="number" value="0" min="0"></input>
-				</label>
+
 				<br/>
-				<button id = "submit" class="btn">Submit</button>
+				<button id = "submit" class="btn btn-success">Submit</button>
 
 			</fieldset>
 			</form>
@@ -49,18 +46,6 @@
 
 		<div class="graphic well span7">
 		<ol id="boat">
-			<li class="row">
-				<ol>
-					<li class="left row1">1L</li>
-					<li class="right row1">1R</li>
-				</ol>
-			</li>
-			<li class="row">
-				<ol>
-					<li class="left row2">2L</li>
-					<li class="right row2">2R</li>
-				</ol>
-			</li>
 		</ol>
 		</div>
 	</div>

@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 	// console.log(form);
 
-	$('.row').find('li').append(form);
+	
 
 	var checkMinimumGirls = function() {
 		var females = $('.femalepaddler:checked').length;
@@ -36,7 +36,7 @@ $(document).ready(function(){
 	};
 
 	$('input[type=radio]').on("click", checkMinimumGirls);
-	$('input[type=number]').on("click", checkMinimumGirls);
+	$('#female-minimum').on("click", checkMinimumGirls);
 
 	var checkSide = function() {
 
@@ -106,5 +106,30 @@ $(document).ready(function(){
 	};
 
 	$('#weightbtn').on('click', checkWeights);
+
+	var boatRow = '<li class="row">\
+				<ol>\
+					<li class="left">L</li>\
+					<li class="right">R</li>\
+				</ol>\
+			</li>';
+
+	// console.log(boatRow);
+
+	var renderBoat = function(){
+		var numberOfRows = $('#number-rows').val();
+		
+		for (var i = 0; i < numberOfRows; i++){
+			$('#boat').append(boatRow);
+		}
+
+		var numberOfRows = 0;
+	};
+
+	$('#submit').click(function(event){
+		event.preventDefault();
+		renderBoat();
+		$('.row').find('li').append(form);
+		});
 
 });
