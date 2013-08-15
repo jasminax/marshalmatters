@@ -102,6 +102,8 @@ $(document).ready(function(){
 		return sumLeft;
 	}
 
+// Reminder: Combine with previous function
+
 	function calculateSumRight() {		
 		$(".right").find(".weight").each(function(){
 			if (!isNaN(this.value) && this.value.length!=0) {
